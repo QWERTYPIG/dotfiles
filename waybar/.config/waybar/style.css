@@ -1,1 +1,180 @@
-../../dotfiles/waybar/.config/waybar/style.css
+@import "mocha.css";
+
+* {
+    font-family: "MesloLGS Nerd Font Mono Bold";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+/* The actual Waybar bar */
+window#waybar {
+    border: none;
+    background-color: transparent;
+}
+
+/* Current window title */
+#window {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    margin: 4px;
+    padding: 2px 10px;
+    color: @text;
+}
+
+/* Buttons */
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    color: @mauve;
+    border-top: 2px solid @mauve;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 8px;
+}
+
+#workspaces button.focused {
+    background-color: transparent;
+    color: @rosewater;
+    border-top: 2px solid @rosewater;
+}
+
+#workspaces button.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: @sapphire;
+    border-top: 2px solid @sapphire;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+/* Generic bubble styling */
+#pulseaudio,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#tray,
+#bluetooth,
+#network,
+#power-profiles-daemon,
+#keyboard-state,
+#language {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+/* PulseAudio */
+#pulseaudio {
+    color: @blue;
+}
+
+/* Clock */
+#clock {
+    color: @sapphire;
+}
+
+#clock.date {
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
+}
+
+/* CPU / memory / temperature */
+#cpu,
+#memory,
+#disk,
+#temperature {
+    padding: 0 8px;
+}
+
+/* Backlight */
+#backlight {
+    padding: 0 8px;
+}
+
+/* Bluetooth */
+#bluetooth {
+    padding: 0 8px;
+}
+
+/* Network */
+#network {
+    padding: 0 14px 0 5px;
+    color: @yellow;
+}
+
+/* Battery */
+#battery {
+    padding: 0 14px 0 5px;
+    color: @green;
+}
+
+/* Second battery */
+#battery.bat2 {
+    padding: 0 14px 0 5px;
+}
+
+/* Power profile */
+#power-profiles-daemon {
+    padding: 0 8px;
+}
+
+/* Keyboard state */
+#keyboard-state {
+    padding: 0 8px;
+}
+
+/* Tray */
+#tray {
+    padding: 0 8px;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+    margin: 2px 12px;
+    color: #7cb342;
+}
+
+#idle_inhibitor.activated {
+    color: @red;
+}
+
+/* Mode / scratchpad */
+#mode,
+#scratchpad {
+    margin: 2px 4px;
+    padding: 0 4px;
+}
+
+/* Workspaces as a bubble */
+.modules-left > widget:first-child > #workspaces {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 0 8px;
+    margin-left: 1px;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 1px;
+}
+
+/* Custom VPN */
+#custom-vpn {
+    color: @lavender;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
