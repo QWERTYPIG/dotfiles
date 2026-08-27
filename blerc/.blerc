@@ -1,0 +1,1 @@
+bleopt color_scheme=catppuccin_mocha
