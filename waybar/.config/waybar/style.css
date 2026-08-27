@@ -31,8 +31,8 @@ button {
 
 button:hover {
     background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @blue;
+    border-top: 2px solid @blue;
 }
 
 /* Workspaces */
@@ -42,8 +42,8 @@ button:hover {
 
 #workspaces button.focused {
     background-color: transparent;
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
+    color: @blue;
+    border-top: 2px solid @blue;
 }
 
 #workspaces button.active {
