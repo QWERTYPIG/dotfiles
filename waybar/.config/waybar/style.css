@@ -31,7 +31,7 @@ button {
 
 button:hover {
     background: inherit;
-    color: @blue;
+    color: @mauve;
     border-top: 2px solid @blue;
 }
 
@@ -43,7 +43,7 @@ button:hover {
 #workspaces button.focused {
     background-color: transparent;
     color: @blue;
-    border-top: 2px solid @blue;
+    border-top: 2px solid @;
 }
 
 #workspaces button.active {
@@ -64,7 +64,7 @@ button:hover {
 #memory,
 #disk,
 #temperature,
-#backlight,
+#custom-wl-gammarelay-brightness,
 #wireplumber,
 #tray,
 #bluetooth,
@@ -101,7 +101,7 @@ button:hover {
 }
 
 /* Backlight */
-#backlight {
+#custom-wl-gammarelay-brightness {
     padding: 0 8px;
 }
 

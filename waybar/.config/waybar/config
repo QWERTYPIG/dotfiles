@@ -21,7 +21,7 @@
  // "cpu",
  // "memory",
  "temperature",
- "backlight",
+ "custom/wl-gammarelay-brightness",
 //        "bluetooth",
  "keyboard-state",
  "sway/language",
@@ -123,9 +123,18 @@
 "format-icons": ["", "", ""]
 },
 "backlight": {
-// "device": "acpi_video1",
+"device": "nvidia_0",
 "format": "{percent}% {icon}",
 "format-icons": ["", "", "", "", "", "", "", "", ""]
+},
+"custom/wl-gammarelay-brightness": {
+    "format": "{percentage}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "return-type": "json",
+    "exec": "wl-gammarelay-rs watch {bp} | awk '{printf \"{\\\"percentage\\\": %s}\\n\", $1; fflush(stdout)}'",
+    "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.02",
+    "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.02",
+    "tooltip": false
 },
 "bluetooth": {
 "format": " {status}",
