@@ -31,7 +31,7 @@ button {
 
 button:hover {
     background: inherit;
-    color: @mauve;
+    color: @blue;
     border-top: 2px solid @blue;
 }
 
