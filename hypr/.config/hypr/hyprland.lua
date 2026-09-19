@@ -23,7 +23,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("~/.config/hypr/brightness_manager.sh")
     hl.exec_cmd("waybar & hyprpaper & swaync & hypridle & fcitx5 & nm-applet --indicator & blueman-applet & wl-gammarelay-rs")
     hl.exec_cmd(terminal)
-    hl.exec_cmd("swaync & hypridle & fcitx5 & nm-applet --indicator & blueman-applet & wl-gammarelay-rs")
+    hl.exec_cmd("swaync & hypridle & fcitx5 & nm-applet --indicator & blueman-applet & wl-gammarelay-rs & /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 end)
 ---ENVIRONMENT VAIRABLES---
 hl.env("XCURSOR_SIZE", "24")
@@ -263,4 +263,11 @@ hl.window_rule({
     },
 
     no_focus = true,
+})
+-- doesn't hypridle when using zen
+hl.window_rule({
+    match = {
+        class = "^(zen)$", -- Matches the Zen Browser window class
+    },
+    idle_inhibit = "focus", -- Inhibits idle while the window is focused
 })
