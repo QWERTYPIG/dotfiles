@@ -12,8 +12,11 @@ ble-import -d integration/fzf-completion
 ble-import -d integration/fzf-key-bindings
 ble-bind -s dsr0 ''
 
+export GDK_SCALE=2
+
 # alias ls='ls --color=auto'
 alias ls='exa --icons always'
+alias la='ls -a'
 #alias open='evince'
 alias preview='evince -w'
 alias view='imv'
@@ -63,3 +66,6 @@ eval "$(pyenv init -)"
 # Added by Antigravity CLI installer
 export PATH="/home/Qwertypig/.local/bin:$PATH"
 export PATH="/home/Qwertypig/.local/bin:$PATH"
+
+# Unity CLI
+case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
